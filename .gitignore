@@ -1,0 +1,8 @@
+# IDE configuration
+.idea
+.vscode
+
+# Python caches
+*.py[cod]
+__pycache__/
+
