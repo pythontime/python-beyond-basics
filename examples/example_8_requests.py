@@ -1,3 +1,9 @@
+"""
+`pip install requests`
+
+Documentation: https://docs.python-requests.org/en/latest/index.html
+"""
+
 import requests
 
 URL = "https://automatetheboringstuff.com/3e/chapter13.html"
