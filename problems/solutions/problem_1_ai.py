@@ -46,3 +46,16 @@ if __name__ == "__main__":
     limit = 100_000
     result = sum_primes_below(limit)
     print(f"Sum of primes below {limit}: {result}")
+
+# -----------------------------------------------------------------------------
+# Claude example from chat
+
+def sum_primes(limit):
+    sieve = bytearray([1]) * limit
+    sieve[0] = sieve[1] = 0
+    for i in range(2, int(limit**0.5) + 1):
+        if sieve[i]:
+            sieve[i*i::i] = bytearray(len(sieve[i*i::i]))
+    return sum(i for i, v in enumerate(sieve) if v)
+
+print(sum_primes(100_000))
